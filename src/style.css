@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slick-slide {
+    width: 268px !important;
+    margin-right: 5px;
+}
+
+.slick-dots {
+    top: -49px;
+    text-align: right;
+}
+
+.slick-dots li.slick-active button::before{
+    color: #FF957D !important;
+    opacity: 1 !important;
+}
+
+.slick-dots li button::before {
+    opacity: 1 !important;
+    color: #64697C;
+    width: 5px;
+    height: 5px;
+    line-height: 0;
+}
+
+.slick-dots li {
+    width: 5px;
+    height: 5px;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.slick-dots li button {
+    width: 5px;
+    height: 5px;
+    padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+ 
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #FFF9F2;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF957D;
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #DDCDBC;
+  }
