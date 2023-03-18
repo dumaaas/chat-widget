@@ -2321,8 +2321,8 @@ export default {
   name: "App",
   data() {
     return {
-      isOpen: true,
-      activeStep: 3,
+      isOpen: false,
+      activeStep: 1,
       chatStep: 1,
       selectedIndustry: "",
       requirements: "",
