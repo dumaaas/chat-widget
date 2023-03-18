@@ -1,9 +1,24 @@
 <template>
   <div
     id="app"
-    class="overflow-x-hidden h-screen w-screen bg-[#55371E] bg-opacity-[7%] relative"
+    class="overflow-x-hidden h-screen w-screen bg-[#F3EBE3] relative"
   >
+    <div
+      class="flex flex-row gap-[85px] flex-wrap items-center xl:justify-between xl:py-0 py-[100px] justify-center h-full max-w-[1220px] mx-auto"
+    >
+      <h1 class="md:text-[82px] md:leading-[92px] text-[48px] leading-[56px] text-[#26293b] xl:max-w-[486px] max-w-full xl:text-left text-center">
+        A new way to expand your business to London.
+      </h1>
+      <img class="max-w-[620px]" :src="require('@/assets/hero.png')" alt="hero-img" />
+    </div>
     <div>
+      <div class="absolute top-[5px] right-[5px]">
+         <button
+            class="rounded-[5px] text-[#26293b] bg-transparent border border-[#DACEBE] px-[37px] py-[8px] text-[18px] leading-[24px] font-medium"
+          >
+            Book a call
+          </button>
+      </div>
       <div
         :class="[
           selectedIndustry.length && isOpen && chatStep !== 8
@@ -378,7 +393,7 @@
           activeStep == 3 && isOpen
             ? 'right-0 opacity-1'
             : 'right-[-460px] opacity-0',
-          'top-0 overflow-hidden h-screen w-[458px] bg-[#FFF9F2] absolute transition-all duration-200 ease-out delay-300',
+          'top-0 overflow-hidden h-screen max-w-[458px] bg-[#FFF9F2] absolute transition-all duration-200 ease-out delay-300',
         ]"
       >
         <div
@@ -461,7 +476,12 @@
               href="#"
               v-scroll-to="'#market'"
               @click="setActiveLink('market')"
-              :class="[activeLink == 'market' ? ' border-b-[#ff957d]' : 'border-transparent', 'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]']"
+              :class="[
+                activeLink == 'market'
+                  ? ' border-b-[#ff957d]'
+                  : 'border-transparent',
+                'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]',
+              ]"
             >
               Market
             </a>
@@ -469,28 +489,48 @@
               href="#"
               v-scroll-to="'#workforce'"
               @click="setActiveLink('workforce')"
-              :class="[activeLink == 'workforce' ? ' border-b-[#ff957d]' : 'border-transparent', 'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]']"
+              :class="[
+                activeLink == 'workforce'
+                  ? ' border-b-[#ff957d]'
+                  : 'border-transparent',
+                'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]',
+              ]"
             >
               Workforce
             </a>
             <p
               v-scroll-to="'#taxes'"
               @click="setActiveLink('taxes')"
-              :class="[activeLink == 'taxes' ? ' border-b-[#ff957d]' : 'border-transparent', 'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]']"
+              :class="[
+                activeLink == 'taxes'
+                  ? ' border-b-[#ff957d]'
+                  : 'border-transparent',
+                'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]',
+              ]"
             >
               Taxes
             </p>
             <p
               v-scroll-to="'#cost'"
               @click="setActiveLink('cost')"
-              :class="[activeLink == 'cost' ? ' border-b-[#ff957d]' : 'border-transparent', 'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]']"
+              :class="[
+                activeLink == 'cost'
+                  ? ' border-b-[#ff957d]'
+                  : 'border-transparent',
+                'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]',
+              ]"
             >
               Cost
             </p>
             <p
               v-scroll-to="'#investment'"
               @click="setActiveLink('investment')"
-              :class="[activeLink == 'investment' ? ' border-b-[#ff957d]' : 'border-transparent', 'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]']"
+              :class="[
+                activeLink == 'investment'
+                  ? ' border-b-[#ff957d]'
+                  : 'border-transparent',
+                'border-b-[4px] cursor-pointer text-[18px] leading-[24px] font-medium pb-[15px]',
+              ]"
             >
               Investment
             </p>
@@ -1877,7 +1917,7 @@
           activeStep == 4 && isOpen
             ? 'right-0 opacity-1'
             : 'right-[-460px] opacity-0',
-          'top-0 overflow-hidden h-screen w-[458px] bg-[#26293B] absolute transition-all duration-200 ease-out delay-300',
+          'top-0 overflow-hidden h-screen max-w-[458px] bg-[#26293B] absolute transition-all duration-200 ease-out delay-300',
         ]"
       >
         <div
@@ -2390,7 +2430,7 @@ export default {
       selectedIndustry: "",
       requirements: "",
       isCost: null,
-      activeLink: 'market',
+      activeLink: "market",
       settings: {
         arrows: false,
         dots: true,
@@ -2429,7 +2469,7 @@ export default {
     },
     setActiveLink(link) {
       this.activeLink = link;
-    }
+    },
   },
 };
 </script>
