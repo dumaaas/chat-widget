@@ -162,7 +162,7 @@
           activeStep == 2 && isOpen
             ? 'right-0 opacity-1'
             : 'right-[-460px] opacity-0',
-          'top-0 h-screen overflow-hidden max-w-[458px] bg-[#26293B] absolute transition-all duration-200 ease-out delay-300',
+          'top-0 h-screen overflow-hidden max-w-[458px] w-[458px] bg-[#26293B] absolute transition-all duration-200 ease-out delay-300',
         ]"
       >
         <div class="flex justify-end p-[5px] border-b border-b-[#64697C]">
@@ -393,7 +393,7 @@
           activeStep == 3 && isOpen
             ? 'right-0 opacity-1'
             : 'right-[-460px] opacity-0',
-          'top-0 overflow-hidden h-screen max-w-[458px] bg-[#FFF9F2] absolute transition-all duration-200 ease-out delay-300',
+          'top-0 overflow-hidden h-screen max-w-[458px] w-[458px] bg-[#FFF9F2] absolute transition-all duration-200 ease-out delay-300',
         ]"
       >
         <div
@@ -1917,7 +1917,7 @@
           activeStep == 4 && isOpen
             ? 'right-0 opacity-1'
             : 'right-[-460px] opacity-0',
-          'top-0 overflow-hidden h-screen max-w-[458px] bg-[#26293B] absolute transition-all duration-200 ease-out delay-300',
+          'top-0 overflow-hidden h-screen max-w-[458px] w-[458px] bg-[#26293B] absolute transition-all duration-200 ease-out delay-300',
         ]"
       >
         <div
