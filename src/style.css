@@ -2,28 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'PP Neue Montreal Book';
+    src: url('../src/assets/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+        url('../src/assets/fonts/PPNeueMontreal-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'PP Neue Montreal Medium';
+    src: url('../src/assets/fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
+        url('../src/assets/fonts/PPNeueMontreal-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'PP Neue Montreal Book', sans-serif;
 }
 
-.slick-slide {
+.market-offer-slider .slick-slide {
     width: 268px !important;
     margin-right: 5px;
 }
 
-.slick-dots {
+.market-offer-slider .slick-dots {
     top: -49px;
     text-align: right;
 }
 
-.slick-dots li.slick-active button::before{
+.connections-slider .slick-slide {
+    width: 394px !important;
+    padding-right: 10px;
+}
+
+.connections-slider .slick-dots {
+  
+    text-align: left;
+    top: 213px;
+}
+
+.connections-slider .slick-dots li.slick-active button::before{
+    color: #26293B !important;
+    opacity: 1 !important;
+}
+
+.connections-slider .slick-dots li button::before {
+    opacity: 1 !important;
+    color: #DDCDBC;
+    width: 8px;
+    height: 8px;
+    line-height: 0;
+}
+
+.connections-slider .slick-dots li {
+    width: 8px;
+    height: 8px;
+    margin-left: 0;
+    margin-right: 14px;
+}
+
+.connections-slider .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+}
+
+.business-slider .slick-slide {
+    width: 394px !important;
+    padding-right: 10px;
+}
+
+.business-slider .slick-dots {
+  
+    text-align: left;
+    top: -58px;
+}
+
+.business-slider .slick-dots li.slick-active button::before{
+    color: #26293B !important;
+    opacity: 1 !important;
+}
+
+.business-slider .slick-dots li button::before {
+    opacity: 1 !important;
+    color: #DDCDBC;
+    width: 8px;
+    height: 8px;
+    line-height: 0;
+}
+
+.business-slider .slick-dots li {
+    width: 8px;
+    height: 8px;
+    margin-left: 0;
+    margin-right: 14px;
+}
+
+.business-slider .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+}
+
+.market-offer-slider .slick-dots li.slick-active button::before{
     color: #FF957D !important;
     opacity: 1 !important;
 }
 
-.slick-dots li button::before {
+.market-offer-slider .slick-dots li button::before {
     opacity: 1 !important;
     color: #64697C;
     width: 5px;
@@ -31,19 +125,38 @@
     line-height: 0;
 }
 
-.slick-dots li {
+.market-offer-slider .slick-dots li {
     width: 5px;
     height: 5px;
     margin-left: 0;
     margin-right: 5px;
 }
 
-.slick-dots li button {
+.market-offer-slider .slick-dots li button {
     width: 5px;
     height: 5px;
     padding: 0;
 }
 
+.slide-enter-active,
+.slide-leave-active {
+  max-height: 0;
+  transition: all 0.5s ease;
+}
+
+.slide-enter,
+.slide-leave-to {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.slide-enter-to,
+.slide-leave {
+  opacity: 1;
+  max-height: 500px;
+  overflow: hidden;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
